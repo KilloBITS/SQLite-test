@@ -1,0 +1,205 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+#root{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.loaderBlock{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: url(./img/loader.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 62px;
+}
+
+.newTaskLoader{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-image: url(./img/loader.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 62px;
+}
+
+.tableData{
+  position: absolute;
+  width: 800px;
+  height: 860px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.table .tabledatacont{
+  color: black;
+  font-family: sans-serif;
+  display: inline-block;
+  padding: 5px 0;
+  text-align: center;
+  width: calc(100% / 3 - 1px);
+  border-right: 1px solid silver;
+  cursor: pointer;
+}
+
+.table:hover .table::before{
+  content: '';
+  position: absolute;
+  right: calc(100% + 5px);
+  top: 5px;
+  background-color: red;
+  width: 6px;
+  height: 6px;
+}
+
+.table.chetno{
+  background-color: #efefef;
+}
+
+.tableHead{
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid silver;
+  margin-bottom: 5px;
+}
+
+.tableHead .btn{
+  float: right;
+  width: 200px;
+  height: 34px;
+  margin: 3px 3px 0 0;
+  background-color: silver;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  line-height: 34px;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.tableHead .btn:hover{
+  background-color: #9f9f9f;
+}
+
+.tableHead .btn:active{
+  background-color: #919191;
+}
+
+.tableFound{
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: #ec8484;
+  height: 40px;
+  line-height: 40px;
+  font-family: sans-serif;
+}
+
+.tableFound img{
+  max-width: 100%;
+}
+
+.headInfo{
+  float: left;
+  color: silver;
+  font-size: 12px;
+  line-height: 40px;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.modalNewTask{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modalContent{
+  width: 600px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.inputText,.inputButton{
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  border: 1px solid red;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.inputText{
+  width: calc(100% - 13px);
+}
+
+.inputButton{
+  width: calc(100% - 11px);
+  border: 1px solid #68a341;
+  box-shadow: 0 1px 2px 0 #a4ca6c inset;
+  -webkit-box-shadow: 0 1px 2px 0 #a4ca6c inset;
+  -moz-box-shadow: 0 1px 2px 0 #a4ca6c inset;
+  background: #96c161;
+  background: -moz-linear-gradient(top, #96c161 0, #609c3d 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #96c161), color-stop(100%, #609c3d));
+  background: -webkit-linear-gradient(top, #96c161 0, #609c3d 100%);
+  background: -o-linear-gradient(top, #96c161 0, #609c3d 100%);
+  background: -ms-linear-gradient(top, #96c161 0, #609c3d 100%);
+  background: linear-gradient(top, #96c161 0, #609c3d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#96c161', endColorstr='#609c3d', GradientType=0);
+  color: white;
+  cursor: pointer;
+}
+
+.modalNewTask.hide{
+  opacity: 0;
+  z-index: -1;
+}
+
+.taskClose{
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 5px);
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-weight: bold;
+  opacity: 0.6;
+}
+
+.taskClose:hover{
+  opacity: 1;
+}
